@@ -23,7 +23,7 @@ export default {
         });
     },
     mounted(){
-      this.map = processChildren(this.$children?this.$children:this.$refs)
+      this.map = processChildren(this.$children?this.$children:this.$slots.default())
       this.setWidthHeight()
     },
     methods:{

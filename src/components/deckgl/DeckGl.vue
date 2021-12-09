@@ -38,7 +38,7 @@ export default {
       onAfterRender: this.setupHandlers,
     });
 
-    processedChildren = processChildren(this.$children?this.$children:this.$refs);
+    processedChildren = processChildren(this.$children?this.$children:this.$slots.default());
     this.map = processedChildren.map;
 
     processedChildren.layers.forEach((layer) => {
